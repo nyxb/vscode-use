@@ -1,6 +1,6 @@
 # 💡 vscode-use
 
-<a href="https://marketplace.visualstudio.com/items?itemName=antfu.ext-name" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/nyxb.ext-name.svg?style=flat&colorA=18181B&colorB=14F195&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=nyxb.vscode-use" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/nyxb.vscode-use.svg?style=flat&colorA=18181B&colorB=14F195&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
 
 > This is a Visual Studio Code extension that allows you to insert "use client" or "use server" statements at the beginning of a file.
 
