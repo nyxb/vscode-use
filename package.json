@@ -1,8 +1,8 @@
 {
   "publisher": "nyxb",
-  "name": "ext-name",
-  "displayName": "ext-name",
-  "version": "0.0.0",
+  "name": "vscode-use",
+  "displayName": "Vscode Use",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@8.6.2",
   "description": "",
@@ -12,10 +12,10 @@
   "homepage": "https://💻nyxb.ws",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nyxb/ext-name"
+    "url": "https://github.com/nyxb/vscode-use"
   },
   "bugs": {
-    "url": "https://github.com/nyxb/ext-name/issues"
+    "url": "https://github.com/nyxb/vscode-use/issues"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/nyxb"
@@ -31,9 +31,32 @@
   "engines": {
     "vscode": "^1.79.2"
   },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "use.insertUseClientStatement",
+        "title": "Insert 'use client' Statement"
+      },
+      {
+        "command": "use.insertUseServerStatement",
+        "title": "Insert 'use server' Statement"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "use.insertUseClientStatement",
+        "key": "ctrl+alt+c",
+        "mac": "ctrl+alt+c",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "command": "use.insertUseServerStatement",
+        "key": "ctrl+alt+s",
+        "mac": "ctrl+alt+s",
+        "when": "editorTextFocus && !editorReadonly"
+      }
+    ]
+  },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nyxr build --watch",
@@ -51,13 +74,13 @@
     "@types/node": "^20.3.1",
     "@types/vscode": "^1.79.1",
     "@vscode/vsce": "^2.19.0",
-    "eslint": "^8.43.0",
     "dynot": "^0.1.8",
+    "eslint": "^8.43.0",
+    "kolibry": "^0.0.2",
     "pnpm": "^8.6.2",
     "rimraf": "^5.0.1",
     "tsup": "^7.0.0",
     "typescript": "^5.1.3",
-    "kolibry": "^0.0.2",
     "vitest": "^0.31.4"
   }
 }
